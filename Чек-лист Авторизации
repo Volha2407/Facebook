@@ -1,0 +1,195 @@
+Проверки
+
+Кнопка Войти:
+    проверить ввод данных в поле Электронный адрес или номер телефона:
+                проверка ввода электронного адреса:
+                                          именная часть:
+                                     Smoke          ввести Email (olya1591)
+                                     critical pass	ввести 1 символ
+                                     critical pass	ввести 2 символа
+                                     critical pass	ввести 63 символа
+                                     critical pass	ввести 64 символа
+                                     critical pass	ввести только нижние подчеркивания (______@mail.ru)
+                                     critical pass	именная часть, где впереди и в конце " ("mail"@mail.ru)
+                                     critical pass	Именная часть содержит + (ma+il@mail.ru)
+                                     critical pass	именная часть содержит точку (ma.il@mail.ru)
+                                     critical pass	ввести цифры
+                                     critical pass	ввести буквы кириллица
+                                     critical pass	ввести буквы латиница
+                                     critical pass	ввести спецсимволы
+                                     critical pass	редактировать данные в поле
+                                     critical pass	очистить введенные данные
+                                     extended	      ввести 65 символов
+                                     extended	      перед именной частью ввести точку (.mail@mail.ru)
+                                     extended	      в конце именной части ввести точку (mail.@mail.ru)
+                                     extended	      ввести значение через пробел
+                                     extended	      ввести пробел
+                                     extended	      ввести пробел в конце
+                                     extended	      ввести пробел вначале
+                                     extended	      ввести 2 раза точку (ma..il@mail.ru)
+                                     extended	      оставить поле пустым при корректно заполненных разделителе и домене (@mail.ru)
+                                     extended	      оставить поле пустым при корректно заполненном разделителе (@)
+                                     extended	      оставить поле пустым при корректно заполненном домене (mail.ru)
+                                     extended	      оставить поле пустым при пустом поле домена и разделителя 
+                                     extended	      ввести теги
+                                     extended	      ввести эмоджи
+                                     extended       проверки GUI
+                                          разделитель:
+                                      Smoke        ввести @
+                                     extended      ввести другой спецсимвол
+                                     extended      пробел
+                                     extended      пустое
+                                     extended      ввести @ 2 раза (mail@mail@mail.ru)
+                                     extended      проверки GUI
+                                          домен:
+                                      Smoke         ввести домен (mail.ru)
+                                    critical pass   ввести буквы кириллица, включая точку
+                                    critical pass   ввести буквы латиница, включая точку
+                                    critical pass   ввести цифры, включая точку
+                                    critical pass   ввести валидный IP-адрес в [] (mail@[16.12.5.15])
+                                    critical pass   ввести валидный IP-адрес без [] (mail@16.12.5.15)
+                                    critical pass   Домен содержит - (mail@ma-il.ru)
+                                    critical pass   ввести 3 символа, включая . между ними
+                                    critical pass   ввести 4 символа, включая . между ними
+                                    critical pass   ввести 253 символа, включая . между ними
+                                    critical pass   ввести 254 символа, включая . между ними
+                                    critical pass   содержит субдомен (mail@mail.list.ru)
+                                    critical pass   редактировать данные в поле
+                                    critical pass   очистить введенные данные
+                                      extended      ввести значение через пробел, включая точку
+                                      extended      ввести пробел (mail@ )
+                                      extended      ввести спецсимволы
+                                      extended      ввести теги
+                                      extended      ввести эмоджи
+                                      extended      Домен содержит - в начале (mail@-mail.ru)
+                                      extended      Домен содержит - после символов и перед точкой (mail@mail-.ru)
+                                      extended      домен содержит невалидный IP (mail@[16.12.5.15$5;№;]
+                                      extended      оставить поле пустым
+                                      extended      ввести значение без точки
+                                      extended      ввести 1 символ
+                                      extended      ввести 2 символа
+                                      extended      ввести более 254 символов, включая . между ними
+                                      extended      проверки GUI
+                проверка ввода номера телефона:
+                                       код страны:
+                                    Smoke     ввести +375
+                                    critical pass   редактировать данные в поле
+                                    critical pass   очистить введенные данные
+                                    extended        ввести буквы кириллица
+                                    extended        ввести буквы латиница
+                                    extended        ввести более 3 цифр
+                                    extended        ввести значение через пробел
+                                    extended        ввести пробел
+                                    extended        ввести пробел в конце
+                                    extended        ввести спецсимволы
+                                    extended        оставить поле пустым
+                                    extended        ввести теги
+                                    extended        ввести эмоджи
+                                    extended        ввести IP-адрес в []
+                                    extended        ввести + и пробел
+                                    extended        ввести + и три другие цифры
+                                    extended        ввести + и спецсимволы
+                                    extended        ввести 375+
+                                    extended        ввести 3+75
+                                    extended        ввести 37+5
+                                    extended        ввести ++
+                                    extended        ввести точку
+                                    extended        ввести точку перед цифрами
+                                    extended        ввести точку между цифрами
+                                    extended        ввести точку после цифр
+                                    extended        ввести -375
+                                    extended        ввести --
+                                    extended        ввести 3-75
+                                    extended        ввести 37-5
+                                    extended        ввести 375-
+                                    extended        ввести 80
+                                    extended        ввести запятую
+                                    extended         ввести запятую перед цифрами
+                                    extended        ввести запятую между цифрами
+                                    extended        ввести запятую после цифр
+                                    extended        проверки GUI
+                                      код оператора:
+                                    Smoke     ввести 29
+                                    critical pass     ввести 44
+                                    critical pass     ввести 33
+                                    critical pass     ввести 25
+                                    critical pass     редактировать данные в поле
+                                    critical pass     очистить введенные данные
+                                    extended          ввести буквы кириллица
+                                    extended          ввести буквы латиница
+                                    extended          ввести 2 любые другие цифры
+                                    extended          ввести больше двух цифр
+                                    extended          ввести значение через пробел
+                                    extended          ввести 1 цифру
+                                    extended          ввести пробел
+                                    extended          ввести пробел в конце
+                                    extended          ввести пробел между цифрами
+                                    extended          ввести спецсимволы
+                                    extended          оставить поле пустым
+                                    extended          ввести теги
+                                    extended          ввести эмоджи
+                                    extended          ввести IP-адрес в []
+                                    extended          ввести цифру и точку
+                                    extended          ввести точку после цифр
+                                    extended          ввести точку перед цифрами
+                                    extended          ввести запятую перед цифрами
+                                    extended          ввести запятую между цифрами
+                                    extended          ввести запятую после цифр
+                                    extended          ввести дефис перед цифрами
+                                    extended          ввести дефис после цифр
+                                    extended          ввести дефис между цифрами
+                                    extended          ввести плюс перед цифрами
+                                    extended          ввести плюс после цифр 
+                                    extended          ввести плюс после цифр 
+                                    extended          проверки GUI                          
+                                      номер телефона:
+                                    Smoke     ввести 7 цифр (9796992)
+                                    critical pass     ввести 7 любых цифр
+                                    critical pass     редактировать данные в поле
+                                    critical pass     очистить введенные данные
+                                    extended          ввести 6 цифр
+                                    extended          ввести 8 цифр
+                                    extended          ввести буквы кириллица
+                                    extended          ввести буквы латиница
+                                    extended          ввести 7 цифр, начиная с 0
+                                    extended          ввести пробел
+                                    extended          ввести пробел между цифрами
+                                    extended          ввести пробел после цифр
+                                    extended          ввести спецсимволы
+                                    extended          оставить поле пустым
+                                    extended          ввести теги
+                                    extended          ввести эмоджи
+                                    extended          ввести IP-адрес в []
+                                    extended          ввести точку между цифрами
+                                    extended          ввести точку после цифр
+                                    extended          ввести точку перед цифрами
+                                    extended          ввести запятую перед цифрами
+                                    extended          ввести запятую между цифрами
+                                    extended          ввести запятую после цифр
+                                    extended          ввести дефис перед цифрами
+                                    extended          ввести дефис после цифр
+                                    extended          ввести дефис между цифрами
+                                    extended          ввести плюс перед цифрами
+                                    extended          ввести плюс после цифр 
+                                    extended          ввести плюс после цифр 
+                                    extended          проверки GUI
+   проверить ввод данных в поле Пароль:
+                                      Smoke           ввести пароль (12345qwerty)  
+                                     critical pass    проверить кнопку видимости пароля
+                                     critical pass    ввод кириллицы
+                                     critical pass    ввод латиницы
+                                     critical pass    ввод цифр
+                                     critical pass    ввод символов
+                                     critical pass    ввод тегов
+                                     critical pass    ввод пробел вначале
+                                     critical pass    ввод пробел в конце
+                                     critical pass    ввод пробел между символами
+                                     extended         ввести только пробелы
+                                     extended         оставить поле пустым 
+                                     extended         проверки GUI
+  Smoke   проверить переход в личный кабинет по нажатию кнопки Войти
+ 
+Ссылка забыли пароль:
+ Smoke проверить переход на страницу восстановления по нажатии на ссылку Забыли пароль
+Кнопка Создать аккаунт
+ Smoke проверить переход на страницу создания аккаунта по нажатии кнопки Создать аккаунт
